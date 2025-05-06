@@ -1,142 +1,134 @@
+/* Estilos generales */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  background-color: #f7f7f7;
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 20px;
 }
 
+/* Contenedor principal */
+.container {
+  width: 95%;
+  max-width: 500px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Título y párrafo */
+h1 {
+  font-weight: 600;
+  color: #333;
+  font-size: 24px;
+}
+
+p {
+  font-weight: 300;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Botones de redes sociales */
 .social-buttons {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .social-button {
-  width: 200px;
-  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 25px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  position: relative;
-  gap: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .social-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.social-button::before {
-  content: "";
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 8px;
+/* Variables de colores */
+:root {
+  --github: #000;
+  --strava: #fc4c02;
+  --instagram: #e4405f;
+  --linkedin: #0077b5;
+  --threads: #000;
+  --tiktok: #000;
+  --hevy: #000;
+  --imdb: #f5c518;
+  --text-dark: #000;
+  --clash-royale: #0550ca; 
+  --clash-of-clans: #d88c2c; 
+  --brawl-stars: #e81818; 
 }
 
-/* Botones en blanco y negro */
-.github {
-  background-color: #000;
-}
-.github::before {
-  background-image: url('https://cdn.jsdelivr.net/npm/simple-icons/icons/github.svg');
-  filter: invert(1);
-}
-
-.threads {
-  background-color: #000;
-}
-.threads::before {
-  background-image: url('https://cdn.jsdelivr.net/npm/simple-icons/icons/threads.svg');
-  filter: invert(1);
-}
-
-.tiktok {
-  background-color: #000;
-}
-.tiktok::before {
-  background-image: url('https://cdn.jsdelivr.net/npm/simple-icons/icons/tiktok.svg');
-  filter: invert(1);
-}
-
-/* Botones con colores */
-.strava {
-  background-color: #fc4c02;
-}
-.strava::before {
-  background-image: url('https://cdn.jsdelivr.net/npm/simple-icons/icons/strava.svg');
-}
-
-.instagram {
-  background-color: #e4405f;
-}
-.instagram::before {
-  background-image: url('https://cdn.jsdelivr.net/npm/simple-icons/icons/instagram.svg');
-}
-
-.linkedin {
-  background-color: #0077b5;
-}
-.linkedin::before {
-  background-image: url('https://cdn.jsdelivr.net/npm/simple-icons/icons/linkedin.svg');
-}
-
-/* Botón de Hevy */
-.hevy {
-  background-color: #000;
-}
-.hevy::before {
-  background-image: url('https://cdn.jsdelivr.net/npm/simple-icons/icons/hevy.svg');
-  filter: invert(1);
-}
-
-/* Botón de IMDb */
+/* Aplicar colores */
+.github { background-color: var(--github); }
+.strava { background-color: var(--strava); }
+.instagram { background-color: var(--instagram); }
+.linkedin { background-color: var(--linkedin); }
+.threads { background-color: var(--threads); }
+.tiktok { background-color: var(--tiktok); }
+.hevy { background-color: var(--hevy); }
 .imdb {
-  background-color: #f5c518;
-  color: black;
+  background-color: var(--imdb);
+  color: var(--text-dark);
 }
-.imdb::before {
-  background-image: url('https://cdn.jsdelivr.net/npm/simple-icons/icons/imdb.svg');
+.chess {
+  background-color: #3b5998;
+  color: white;
 }
-
-/* Botón de Clash Royale con texto centrado */
-.clash-royale {
-  background-color: #0055d4;
-  text-align: center;
-  font-size: 18px;
-  width: 220px;
-  height: 55px;
-}
-
-/* Botón de Clash of Clans con texto centrado */
-.clash-of-clans {
-  background-color: #d58c29;
-  text-align: center;
-  font-size: 18px;
-  width: 220px;
-  height: 55px;
-}
-
-/* Botón de Brawl Stars con texto centrado */
+.clash-royale { background-color: var(--clash-royale); }
+.clash-of-clans { background-color: var(--clash-of-clans); }
 .brawl-stars {
-  background-color: #ffcc00;
-  text-align: center;
-  font-size: 18px;
-  width: 220px;
-  height: 55px;
-  color: black;
+  background-color: var(--brawl-stars);
+}
+
+
+
+/* Estilos del enlace de carreras */
+.link-carreras {
+  margin-top: 20px;
+  text-decoration: none;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.link-carreras:hover {
+  color: #45a049;
+}
+
+/* 📱 Diseño responsive para móviles */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .social-button {
+    font-size: 16px;
+    padding: 12px;
+  }
 }

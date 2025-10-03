@@ -452,7 +452,7 @@ body.dark .footer p {
 }
 
 /* Responsive */
-@media (max-width: 767px) {
+@media (max-width: 500px) {
   #hero {
     padding: 5rem 1rem 1.5rem;
   }
